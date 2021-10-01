@@ -1,3 +1,7 @@
+from functools import lru_cache
+
+
+@lru_cache
 def fibo_1(n):
     """
     fibonacchi number
@@ -9,4 +13,5 @@ def fibo_1(n):
         return fibo_1(n-2) + fibo_1(n-1)
 
 
-print(fibo_1(6))
+if __name__ == '__main__':
+    print(fibo_1(50))
